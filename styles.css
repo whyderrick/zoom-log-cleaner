@@ -1,11 +1,19 @@
 body {
-  margin: 5%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0 5%;
+  min-height: 100vh;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10%;
+  margin-top: 3em;
+}
+
+footer {
+  margin: 1.5em 0;
 }
 
 textarea{

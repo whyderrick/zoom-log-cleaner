@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const NAME_AND_TIMESTAMP = /^.+ : /;
 const TIMESTAMP = /^\S+\s+From / ;
-const URL = /http/;
+const URL = /\w\.\w{2,}/;
 const PUBLIC_MESSAGE = / to Everyone :/;
 
 
@@ -30,7 +30,7 @@ function filterLogs(matchingPattern = URL) {
 
   let inputLines = input.value.split("\n");
   let outputLines = inputLines
-      .filter((line) => line.match(/http/))
+      .filter((line) => line.match(URL))
       .map((line) => line.replace(TIMESTAMP, "").replace(PUBLIC_MESSAGE, ":"));
 
   output.value = outputLines.join("\n");

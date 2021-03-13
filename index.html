@@ -5,24 +5,34 @@
   <link rel="stylesheet" href="./styles.css">
   <title>Zoom Log Cleaner</title>
 </head>
+
 <body>
   <header>
     <h1>Zoom Log Cleaner</h1>
     <p id="explanation">This tool exists to strip timestamps and usernames from
-    Zoom Logs, leaving you with just the text you care about.</p>
-  <header>
+      Zoom Logs, leaving you with just the text you care about.
+    </p>
+    <p>It can filter just the messages with links in them.</p>
+    <p>It assumes everything you're pasting in is a public chat for now.</p>
+  </header>
   <main>
     <div id="input">
       <textarea name="input" cols="30" rows="10" data-role="input"></textarea>
 
       <button name="clean">Remove Timestamps</button>
       <button data-remove-names=true name="clean">Remove Timestamps and Names</button>
-      <button data-links-only=true name="filter">Messages with "http" in them</button>
+      <button data-links-only=true name="filter">Messages with links in them</button>
     </div>
     <div id="output">
       <textarea id="" name="output" cols="30" rows="10" data-role="output"></textarea>
     </div>
   </main>
+  <footer>
+    <p>Made by Derrick. Hosted on Netlify. Code
+    is <a href="https://github.com/whyderrick/zoom-log-cleaner">here</a>. You
+    can <a href="mailto:derrick@derrick.fyi">email me</a> with questions or
+    suggestions.
+  </footer>
   <script src="main.js"></script>
-</body>
+<body>
 </html>
